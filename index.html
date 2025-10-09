@@ -27,7 +27,7 @@
                     </a>
 
                     <div class="relative group">
-                        <div class="flex flex-row items-center gap-2 text-sm text-white cursor-pointer">
+                        <div class="flex flex-row items-center gap-2 text-sm text-white cursor-pointer" id="my-account">
                             <i class="fa-solid fa-user"></i>
                             <div class="flex items-center gap-1">
                                 <span>My Account</span>
@@ -35,7 +35,7 @@
                             </div>
                         </div>
 
-                        <ul class="absolute top-[160%] right-0 z-10 divide-y divide-gray-300 space-y-1.5 bg-white pt-1.5 border border-gray-300 rounded-sm w-32 transition ease-in duration-300 origin-top scale-y-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:scale-y-100">
+                        <ul class="absolute top-[160%] right-0 z-10 divide-y divide-gray-300 space-y-1.5 bg-white pt-1.5 border border-gray-300 rounded-sm w-32 transition ease-in duration-300 origin-top scale-y-0 invisible opacity-0" id="show-account">
                             <li class="px-3 pb-1.5"><a href="login.html" class="text-gray-800 text-xs font-medium">Log In</a></li>
                             <li class="px-3 pb-1.5"><a href="register.html" class="text-gray-800 text-xs font-medium">Sign Up</a></li>
                             <li class="px-3 pb-1.5"><a href="compare.html" class="text-gray-800 text-xs font-medium">Compare (0)</a></li>
@@ -64,22 +64,22 @@
 
                 <div class="w-1/4">
                     <div class="flex items-center justify-end gap-5">
-                        <div class="flex items-center gap-3 border-r border-gray-300 pr-5">
+                        <div class="flex items-center gap-3 border-r border-gray-200 pr-5">
                             <i class="fa-solid fa-phone-volume text-2xl text-gray-500"></i>
                             <h4 class="flex flex-col gap-0.5">
                                 <span class="text-gray-600 text-sm">Need Help?</span>
-                                <a href="tel:+123456789" class="text-lg font-medium text-gray-700">+1 123 456 789</a>
+                                <a href="tel:+123456789" class="font-medium text-gray-700">+1 123 456 789</a>
                             </h4>
                         </div>
 
-                        <div class="flex items-center gap-3 group cursor-pointer">
+                        <div class="flex items-center gap-3 group cursor-pointer" id="cart">
                             <i class="fa-solid fa-cart-shopping text-2xl text-gray-500"></i>
                             <div class="flex flex-col gap-0.5">
                                 <h2 class="flex items-center gap-1">
                                     <span class="text-gray-600 text-sm">Cart</span> 
                                     <span class="w-5 h-5 flex items-center justify-center rounded-full bg-mainColor text-white text-xs font-semibold">1</span>
                                 </h2>
-                                <span class="text-lg font-medium text-gray-700 group-hover:text-mainColor font-outfit">$100.00</span>
+                                <span class="font-medium text-gray-700 group-hover:text-mainColor font-outfit">$100.00</span>
                             </div>
                         </div>
                     </div>
@@ -88,5 +88,107 @@
         </div>
     </header>
     <!-- Header End -->
+
+    <!-- Cart Start -->
+    <section class="min-h-screen h-full fixed top-0 right-0 left-0 z-20 origin-right invisible opacity-0 transition ease-in-out duration-300" id="cart-item">
+        <div class="absolute top-0 right-0 left-0 w-full h-full bg-black opacity-60 close-cart"></div>
+        <div class="absolute top-0 right-0 bg-white w-sm h-full botder-l border-gray-300 shadow z-30 origin-right scale-x-0 transition ease-out duration-300 delay-100" id="cart-box">
+            <div class="flex flex-col justify-between gap-10 h-full">
+                <div class="h-4/5">
+                    <!-- Cart Head -->
+                    <div class="bg-mainColor p-2.5 px-5 flex items-center justify-between gap-2">
+                        <h2 class="text-white">Your Shpping Cart</h2>
+                        <i class="fa-solid fa-xmark text-white cursor-pointer close-cart"></i>
+                    </div>
+        
+                    <!-- No Item -->
+                    <div class="px-5 py-10 flex flex-col items-center justify-center gap-4">
+                        <svg class="w-20" fill="#dedede" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 65"><defs><style>.cls-100{fill:none;stroke:#dedede;stroke-miterlimit:10;stroke-width:3px;}.cls-2{fill:#dedede;}</style></defs><polygon class="cls-100" points="35.5 18.5 45.5 18.5 45.5 63.5 1.5 63.5 1.5 18.5 11.5 18.5 35.5 18.5"></polygon><path class="cls-100" d="M13.5,24.5v-13a10,10,0,0,1,20,0v13"></path><path id="Close" class="cls-2" d="M25,42.2,33.2,34a1,1,0,0,0,0-1.42,1,1,0,0,0-1.43,0l-8.23,8.19-8.31-8.31a1,1,0,0,0-1.43,0,1,1,0,0,0,0,1.43l8.3,8.3-8.33,8.29A1,1,0,0,0,15.2,51.9l8.33-8.27L31.8,51.9a1,1,0,0,0,1.43,0,1,1,0,0,0,0-1.43Z"></path></svg>
+                        <h4 class="text-sm text-gray-700">Your cart is currently empty.</h4>
+                        <a href="shop.html" class="bg-mainColor text-white py-2.5 px-6 rounded-full text-sm font-semibold font-outfit">Continue Shopping</a>
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="pt-6 h-full overflow overflow-y-auto">
+                        <div class="divide-y divide-gray-200 space-y-6">
+                            <div class="flex gap-4 px-4 pb-6">
+                                <div class="w-20 h-20 border border-gray-200 rounded-sm">
+                                    <img src="./assets/img/product/sm/1.webp" alt="">
+                                </div>
+            
+                                <div class="flex items-start gap-5">
+                                    <div class="space-y-2.5">
+                                        <a href="single-product.html" class="block text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
+                                        <span class="block text-gray-600 text-xs">3 X $20.00</span>
+                                    </div>
+                                    <button class="border-0 cursor-pointer"><i class="fa-solid fa-trash-can text-rose-500"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 px-4 pb-6">
+                                <div class="w-20 h-20 border border-gray-200 rounded-sm">
+                                    <img src="./assets/img/product/sm/1.webp" alt="">
+                                </div>
+            
+                                <div class="flex items-start gap-5">
+                                    <div class="space-y-2.5">
+                                        <a href="single-product.html" class="block text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
+                                        <span class="block text-gray-600 text-xs">3 X $20.00</span>
+                                    </div>
+                                    <button class="border-0 cursor-pointer"><i class="fa-solid fa-trash-can text-rose-500"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Total -->
+                <div class="bg-gray-100 divide-y divide-gray-300">
+                    <div class="flex items-center justify-between gap-10 p-4">
+                        <div class="flex flex-col space-y-1">
+                            <span class="text-xs font-semibold text-gray-700">Total Item</span>
+                            <span class="text-sm font-medium">7</span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <span class="text-xs font-semibold text-gray-700">Subtotal</span>
+                            <span class="text-sm font-medium">$320.00</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 items-center justify-between gap-2 p-4">
+                        <a href="" class="block bg-mainColor text-white text-sm font-semibold rounded-full text-center py-2.5 px-5 transition-all ease-in duration-300 hover:bg-gray-700">View Cart</a>
+                        <a href="" class="block bg-gray-700 text-white text-sm font-semibold rounded-full text-center py-2.5 px-5 transition-all ease-in duration-300 hover:bg-mainColor">Check out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cart End -->
+
+    <script>
+        const cart = document.getElementById('cart');
+        const cartItem = document.getElementById('cart-item');
+        let closeCart = document.getElementsByClassName('close-cart');
+
+       document.getElementById('my-account').addEventListener('click', () => {
+            const showAccount = document.getElementById('show-account');
+            showAccount.classList.toggle('scale-y-0');
+            showAccount.classList.toggle('invisible');
+            showAccount.classList.toggle('opacity-0');
+        });
+
+
+        cart.addEventListener('click', () => {
+            cartItem.classList.remove('invisible', 'opacity-0');
+            document.getElementById('cart-box').classList.remove('scale-x-0');
+        });
+
+        for (let i = 0; i < closeCart.length; i++) {
+            closeCart[i].addEventListener('click', () => {
+                cartItem.classList.add('invisible', 'opacity-0');
+            });
+        }
+    </script>
+
 </body>
 </html>
