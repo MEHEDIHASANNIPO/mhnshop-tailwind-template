@@ -26,6 +26,7 @@
                         <span>support@example.com</span>
                     </a>
 
+                    <!-- Account -->
                     <div class="relative group">
                         <div class="flex flex-row items-center gap-2 text-sm text-white cursor-pointer" id="my-account">
                             <i class="fa-solid fa-user"></i>
@@ -53,9 +54,12 @@
         <div class="container mx-auto px-3">
             <div class="flex items-center justify-between gap-5">
                 <div class="w-3/4 flex items-center gap-20">
+                    <!-- Logo -->
                     <a href="index.html" class="block">
                         <img src="./assets/img/logo.png" alt="" class="max-w-32 object-cover">
                     </a>
+
+                    <!-- Search -->
                     <div class="flex items-center flex-1">
                         <input type="text" placeholder="Search..." class="border-2 border-r-0 border-mainColor rounded-l-full py-2 px-4 w-4/5 focus-visible:outline-mainColor">
                         <button type="submit" class="bg-mainColor text-white font-semibold py-2.5 px-5 rounded-r-full cursor-pointer">Search</button>
@@ -64,6 +68,8 @@
 
                 <div class="w-1/4">
                     <div class="flex items-center justify-end gap-5">
+
+                        <!-- Contact -->
                         <div class="flex items-center gap-3 border-r border-gray-200 pr-5">
                             <i class="fa-solid fa-phone-volume text-2xl text-gray-500"></i>
                             <h4 class="flex flex-col gap-0.5">
@@ -72,6 +78,7 @@
                             </h4>
                         </div>
 
+                        <!-- Cart -->
                         <div class="flex items-center gap-3 group cursor-pointer" id="cart">
                             <i class="fa-solid fa-cart-shopping text-2xl text-gray-500"></i>
                             <div class="flex flex-col gap-0.5">
@@ -88,6 +95,77 @@
         </div>
     </header>
     <!-- Header End -->
+
+    <!-- Header Menu Start -->
+    <section class="bg-white border-b border-gray-200 py-2.5">
+        <div class="container mx-auto px-3">
+            <div class="flex items-center justify-between gap-10">
+                <!-- Categoires -->
+                <div class="relative group">
+                    <div class="flex items-center gap-3 bg-gray-100 py-3 px-6 rounded-full cursor-pointer">
+                        <span><i class="fa-solid fa-bars text-sm"></i></span>
+                        <h4 class="text-sm text-gray-700 font-semibold flex items-center justify-between gap-10">Shop by Departments <i class="fa-solid fa-angle-down"></i></h4>
+                    </div>
+
+                    <div class="absolute w-full hidden pt-2 transition ease-in-out duration-300 group-hover:block">
+                        <ul class="divide-y divide-gray-200 px-4 bg-white border-2 border-mainColor rounded-xl">
+                            <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm text-gray-700">Bakery <i class="fa-solid fa-plus"></i></a>
+                                <ul class="pl-3 divide-y divide-gray-200">
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Biscuits</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Cookies</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Wafers</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Cake</a></li>
+                                </ul>
+                            </li>
+                            <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Vegetables</a></li>
+                            <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Chips</a></li>
+                            <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm text-gray-700">Snacks Item <i class="fa-solid fa-plus"></i></a>
+                                <ul class="pl-3 divide-y divide-gray-200">
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Crackers</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Bars</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Chips</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Toasts</a></li>
+                                </ul>
+                            </li>
+                            <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm text-gray-700">Beverages <i class="fa-solid fa-plus"></i></a>
+                                <ul class="pl-3 divide-y divide-gray-200">
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Coffee</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Cream</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Chocolate</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Cream</a></li>
+                                </ul>
+                            </li>
+                            <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm text-gray-700">Milk Items <i class="fa-solid fa-plus"></i></a>
+                                <ul class="pl-3 divide-y divide-gray-200">
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Crackers</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Bars</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Chips</a></li>
+                                    <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Toasts</a></li>
+                                </ul>
+                            </li>
+                            <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Sea Food</a></li>
+                            <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm text-gray-700">Toasts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="">
+                    <ul class="flex flex-row items-center gap-10">
+                        <li><a href="index.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Home</a></li>
+                        <li><a href="shop.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Our Store</a></li>
+                        <li><a href="special.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Special</a></li>
+                        <li><a href="about.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">About Us</a></li>
+                        <li><a href="blog.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Blogs</a></li>
+                        <li><a href="contact.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Contact</a></li>
+                        <li><a href="contact.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">FAQs</a></li>
+                        <li><a href="return.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Menu End -->
 
     <!-- Cart Start -->
     <section class="min-h-screen h-full fixed top-0 right-0 left-0 z-20 origin-right invisible opacity-0 transition ease-in-out duration-300" id="cart-item">
@@ -124,7 +202,7 @@
                                     <button class="border-0 cursor-pointer"><i class="fa-solid fa-trash-can text-rose-500"></i></button>
                                 </div>
                             </div>
-                            
+
                             <div class="flex gap-4 px-4 pb-6">
                                 <div class="w-20 h-20 border border-gray-200 rounded-sm">
                                     <img src="./assets/img/product/sm/1.webp" alt="">
@@ -169,6 +247,7 @@
         const cart = document.getElementById('cart');
         const cartItem = document.getElementById('cart-item');
         let closeCart = document.getElementsByClassName('close-cart');
+        const hasChild = document.querySelectorAll(".has-child");
 
        document.getElementById('my-account').addEventListener('click', () => {
             const showAccount = document.getElementById('show-account');
@@ -188,6 +267,21 @@
                 cartItem.classList.add('invisible', 'opacity-0');
             });
         }
+
+        hasChild.forEach((item) => {
+            const link = item.querySelector("a");
+            const submenu = item.querySelector("ul");
+            const icon = item.querySelector("i");
+
+            submenu.classList.add("hidden");
+
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                submenu.classList.toggle("hidden");
+                icon.classList.toggle("fa-plus");
+                icon.classList.toggle("fa-minus");
+            });
+        });
     </script>
 
 </body>
