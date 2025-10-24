@@ -16,10 +16,10 @@
 </head>
 <body>
     <!-- Header Top Start -->
-    <section class="bg-gray-800 py-2.5">
+    <section class="bg-gray-800 py-3 md:py-2.5">
         <div class="container mx-auto px-3">
-            <div class="flex flex-row justify-between items-center gap-5">
-                <h2 class="text-white text-base">Special Offer! Get 20% OFF on all services for a limited time.</h2>
+            <div class="flex flex-row justify-center md:justify-between items-center gap-5">
+                <h2 class="text-white text-base max-md:hidden">Special Offer! Get 20% OFF on all services for a limited time.</h2>
                 <div class="flex items-center gap-4">
                     <a href="mailto:support@example.com" class="text-white text-sm transition ease-in duration-300 hover:text-mainColor flex items-center gap-2 border-r border-gray-200 pr-4">
                         <i class="fa-regular fa-envelope"></i> 
@@ -53,14 +53,95 @@
     <header id="header-area" class="bg-white border-b border-gray-200 py-4">
         <div class="container mx-auto px-3">
             <div class="flex items-center justify-between gap-5">
-                <div class="md:w-3/5 xl:w-3/4 flex items-center md:gap-10 lg:gap-14 xl:gap-20">
+                <div class="md:w-3/5 xl:w-3/4 flex items-center gap-5 sm:gap-8 md:gap-10 lg:gap-14 xl:gap-20">
+                    <!-- Mobile & Tablet Menu -->
+                    <div class="max-md:block hidden">
+                        <!-- Mobile Menu Button -->
+                        <button class="text-xl sm:text-2xl text-gray-700 font-semibold cursor-pointer border-0" id="mobile-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Mobile Menu Main -->
+                        <div class="min-h-screen h-full fixed top-0 right-0 left-0 z-20 origin-left invisible opacity-0 transition ease-in-out duration-300" id="menu-box">
+                            <div class="absolute top-0 right-0 left-0 w-full h-full bg-black opacity-60 close-menu"></div>
+                            <div class="absolute top-0 left-0 bg-white w-80 sm:w-sm h-full botder-r border-gray-300 shadow z-30 origin-left scale-x-0 transition ease-out duration-300 delay-100" id="menu-item">
+                                <div class="flex flex-col gap-5 h-full">
+                                    <!-- Menu Head -->
+                                    <div class="bg-mainColor p-2.5 px-5 flex items-center justify-between gap-2">
+                                        <h2 class="text-white">Menu</h2>
+                                        <i class="fa-solid fa-xmark text-white cursor-pointer close-menu"></i>
+                                    </div>
+
+                                    <div class="overflow-hidden overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                                        <!-- Menu -->
+                                        <ul class="flex flex-col gap-2.5 px-5 divide-y divide-gray-300">
+                                            <li><a href="index.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Home</a></li>
+                                            <li><a href="shop.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Our Store</a></li>
+                                            <li><a href="special.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Special</a></li>
+                                            <li><a href="about.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">About Us</a></li>
+                                            <li><a href="blog.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Blogs</a></li>
+                                            <li><a href="contact.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Contact</a></li>
+                                            <li><a href="contact.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">FAQs</a></li>
+                                            <li><a href="return.html" class="block text-sm font-semibold text-gray-700 pb-2.5 transition ease-in duration-300 hover:text-mainColor">Return Policy</a></li>
+                                        </ul>
+
+                                        <!-- Category -->
+                                        <div class="px-5 mt-8">
+                                            <h4 class="text-lg font-semibold text-gray-700 mb-3">Shop By Departments</h4>
+
+                                            <ul class="divide-y divide-gray-200">
+                                                <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Bakery <i class="fa-solid fa-plus"></i></a>
+                                                    <ul class="pl-3 divide-y divide-gray-200">
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Biscuits</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Cookies</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Wafers</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Cake</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Vegetables</a></li>
+                                                <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Chips</a></li>
+                                                <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Snacks Item <i class="fa-solid fa-plus"></i></a>
+                                                    <ul class="pl-3 divide-y divide-gray-200">
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Crackers</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Bars</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Chips</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Toasts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Beverages <i class="fa-solid fa-plus"></i></a>
+                                                    <ul class="pl-3 divide-y divide-gray-200">
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Coffee</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Cream</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Chocolate</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Cream</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="py-3 has-child"><a href="javascript:void(0)" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Milk Items <i class="fa-solid fa-plus"></i></a>
+                                                    <ul class="pl-3 divide-y divide-gray-200">
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Crackers</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Bars</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Chips</a></li>
+                                                        <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Toasts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Sea Food</a></li>
+                                                <li class="py-3"><a href="" class="flex items-center justify-between gap-4 text-sm font-medium text-gray-700">Toasts</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile & Tablet Menu -->
+
                     <!-- Logo -->
                     <a href="index.html" class="block">
-                        <img src="./assets/img/logo.png" alt="" class="max-w-32 object-cover">
+                        <img src="./assets/img/logo.png" alt="" class="max-w-20 sm:max-w-32 object-cover">
                     </a>
 
                     <!-- Search -->
-                    <div class="flex items-center flex-1">
+                    <div class="max-md:hidden flex items-center flex-1">
                         <input type="text" placeholder="Search..." class="border-2 border-r-0 border-mainColor rounded-l-full py-2 px-4 w-4/5 focus-visible:outline-mainColor">
                         <button type="submit" class="bg-mainColor text-white font-semibold py-2.5 px-5 rounded-r-full cursor-pointer">Search</button>
                     </div>
@@ -70,23 +151,23 @@
                     <div class="flex items-center justify-end gap-5">
 
                         <!-- Contact -->
-                        <div class="flex items-center gap-3 border-r border-gray-200 pr-5">
-                            <i class="fa-solid fa-phone-volume text-2xl text-gray-500"></i>
-                            <h4 class="flex flex-col gap-0.5">
+                        <a href="tel:+123456789" class="flex items-center gap-3 border-r border-gray-300 md:border-gray-200 pr-5">
+                            <i class="fa-solid fa-phone-volume text-xl sm:text-2xl text-gray-500"></i>
+                            <h4 class="max-md:hidden flex flex-col gap-0.5">
                                 <span class="text-gray-600 text-sm">Need Help?</span>
-                                <a href="tel:+123456789" class="font-medium text-gray-700">+1 123 456 789</a>
+                                <span class="font-medium text-gray-700">+1 123 456 789</span>
                             </h4>
-                        </div>
+                        </a>
 
                         <!-- Cart -->
-                        <div class="flex items-center gap-3 group cursor-pointer" id="cart">
-                            <i class="fa-solid fa-cart-shopping text-2xl text-gray-500"></i>
+                        <div class="flex items-center gap-1.5 sm:gap-3 group cursor-pointer" id="cart">
+                            <i class="fa-solid fa-cart-shopping text-xl sm:text-2xl text-gray-500"></i>
                             <div class="flex flex-col gap-0.5">
                                 <h2 class="flex items-center gap-1">
-                                    <span class="text-gray-600 text-sm">Cart</span> 
+                                    <span class="max-sm:hidden text-gray-600 text-sm">Cart</span> 
                                     <span class="w-5 h-5 flex items-center justify-center rounded-full bg-mainColor text-white text-xs font-semibold">1</span>
                                 </h2>
-                                <span class="font-medium text-gray-700 group-hover:text-mainColor font-outfit">$100.00</span>
+                                <span class="max-md:hidden font-medium text-gray-700 group-hover:text-mainColor font-outfit">$100.00</span>
                             </div>
                         </div>
                     </div>
@@ -99,7 +180,13 @@
     <!-- Header Menu Start -->
     <section class="bg-white border-b border-gray-200 py-2.5">
         <div class="container mx-auto px-3">
-            <div class="flex items-center justify-between md:gap-5 cl:gap-10">
+            <!-- Mobile Search -->
+            <div class="md:hidden flex items-center flex-1 max-w-72 sm:max-w-md mx-auto">
+                <input type="text" placeholder="Search..." class="border-2 border-r-0 border-mainColor rounded-l-full py-1.5 sm:py-2 px-4 w-4/5 focus-visible:outline-mainColor">
+                <button type="submit" class="bg-mainColor text-white font-semibold py-2 sm:py-2.5 px-5 rounded-r-full cursor-pointer">Search</button>
+            </div>
+
+            <div class="max-md:hidden flex items-center justify-between md:gap-5 xl:gap-10">
                 <!-- Categoires -->
                 <div class="relative group">
                     <div class="flex items-center gap-3 bg-gray-100 py-3 px-6 rounded-full cursor-pointer">
@@ -152,14 +239,14 @@
                 <!-- Menu -->
                 <div class="">
                     <ul class="flex flex-row items-center md:gap-6 xl:gap-10">
-                        <li><a href="index.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Home</a></li>
-                        <li><a href="shop.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Our Store</a></li>
-                        <li><a href="special.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Special</a></li>
-                        <li><a href="about.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">About Us</a></li>
-                        <li><a href="blog.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Blogs</a></li>
-                        <li><a href="contact.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Contact</a></li>
-                        <li><a href="contact.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">FAQs</a></li>
-                        <li><a href="return.html" class="lg:text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Return Policy</a></li>
+                        <li><a href="index.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Home</a></li>
+                        <li><a href="shop.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Our Store</a></li>
+                        <li><a href="special.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Special</a></li>
+                        <li><a href="about.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">About Us</a></li>
+                        <li><a href="blog.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Blogs</a></li>
+                        <li><a href="contact.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Contact</a></li>
+                        <li><a href="contact.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">FAQs</a></li>
+                        <li><a href="return.html" class="text-base font-semibold text-gray-700 transition ease-in duration-300 hover:text-mainColor">Return Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -171,17 +258,17 @@
     <section class="py-5">
         <div class="container mx-auto px-3">
             <div class="">
-                <div class="grid grid-cols-2 items-center gap-10 bg-[#a9d5cf] py-10 px-32 rounded-xl">
+                <div class="flex sm:grid sm:grid-cols-2 items-center gap-3 sm:gap-10 bg-[#a9d5cf] py-5 sm:py-10 px-5 sm:px-20 md:px-32 rounded-xl">
                     <!-- Banner Content -->
-                    <div>
-                        <p class="text-gray-700">Pyridoxine Vitamin B6</p>
-                        <h2 class="max-w-sm mt-5 text-4xl font-semibold text-gray-800">100% Natural & Organic Fruit Juice</h2>
-                        <a href="" class="bg-white inline-block text-sm text-gray-700 font-bold py-3 px-8 rounded-full mt-10 transition ease-in duration-300 hover:text-white hover:bg-mainColor">Buy it Now</a>
+                    <div class="max-sm:flex-1">
+                        <p class="max-sm:text-sm text-gray-700">Pyridoxine Vitamin B6</p>
+                        <h2 class="max-w-sm mt-3 sm:mt-5 text-lg max-sm:leading-6 sm:text-4xl font-semibold text-gray-800">100% Natural & Organic Fruit Juice</h2>
+                        <a href="" class="bg-white inline-block text-xs sm:text-sm text-gray-700 font-bold py-1.5 sm:py-3 px-4 sm:px-8 rounded-full mt-4 sm:mt-10 transition ease-in duration-300 hover:text-white hover:bg-mainColor">Buy it Now</a>
                     </div>
 
                      <!-- Banner Image -->
                     <div class="">
-                        <img src="./assets/img/banner.png" class="object-cover max-w-96 w-full" alt="">
+                        <img src="./assets/img/banner.png" class="object-cover max-w-28 sm:max-w-96 w-full" alt="">
                     </div>
                 </div>
             </div>
@@ -190,263 +277,267 @@
     <!-- Banner End -->
 
     <!-- Banner Categories Start -->
-    <section class="-mt-20">
+    <section class="sm:mt-5 md:-mt-20">
         <div class="container mx-auto px-3">
-            <div class="flex items-center justify-center md:gap-5 gap-10">
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/1.png" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Vegetables</span>
-                </a>
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/2.webp" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Fruits</span>
-                </a>
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/3.png" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Meats</span>
-                </a>
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/4.png" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Milk</span>
-                </a>
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/5.png" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Juices</span>
-                </a>
-                <a href="" class="group block bg-white rounded-lg py-5 md:px-5 lg:px-10 text-center shadow-sm space-y-3 md:max-w-32 lg:max-w-40 w-full">
-                    <img src="./assets/img/category/6.png" alt="" class="max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
-                    <span class="block text-sm font-bold text-gray-700 group-hover:text-mainColor">Bakery</span>
-                </a>
+            <div class="max-md:overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-2">
+                <div class="flex items-center justify-center gap-3 sm:gap-5 lg:gap-10 max-sm:w-3xl max-md:w-5xl">
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/1.png" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Vegetables</span>
+                    </a>
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/2.webp" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Fruits</span>
+                    </a>
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/3.png" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Meats</span>
+                    </a>
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/4.png" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Milk</span>
+                    </a>
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/5.png" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Juices</span>
+                    </a>
+                    <a href="" class="group block bg-white rounded-lg py-5 px-5 sm:px-10 md:px-5 lg:px-10 text-center shadow-sm space-y-3 sm:max-w-40 md:max-w-32 lg:max-w-40 w-full">
+                        <img src="./assets/img/category/6.png" alt="" class="max-w-8 sm:max-w-10 mx-auto transition ease-out duration-300 group-hover:rotate-y-180">
+                        <span class="block text-xs sm:text-sm font-bold text-gray-700 group-hover:text-mainColor">Bakery</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <!-- Banner Categories End -->
 
     <!-- Popular Product Start -->
-    <section class="py-20">
+    <section class="py-14 sm:py-20">
         <div class="container mx-auto px-3">
             <!-- Section Title -->
-            <div class="mb-16 text-center">
-                <h2 class="text-4xl font-semibold text-gray-800">Popular Products</h2>
+            <div class="mb-10 sm:mb-16 text-center">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800">Popular Products</h2>
             </div>
 
-            <!-- Product Items -->
-            <div class="grid grid-cols-5 justify-between gap-4">
-
-                <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
-                    <div class="relative">
-                        <!-- Product Images -->
-                        <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
-
-                        <!-- Product Action -->
-                        <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+            <div class="max-md:overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-2">
+                <!-- Product Items -->
+                <div class="grid grid-cols-5 justify-between gap-4 max-md:w-6xl">
+    
+                    <!-- Single Item -->
+                    <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                        <div class="relative">
+                            <!-- Product Images -->
+                            <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                            <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+    
+                            <!-- Product Action -->
+                            <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Product Category -->
-                    <p class="text-xs text-gray-600 mt-2">Snacks</p>
-
-                    <!-- Product Title -->
-                    <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Seeds of Change Organic Quinoa, Brown, & Red Rice</h4>
-
-                    <!-- Product Review -->
-                    <div class="flex items-center gap-1">
-                        <div class="flex items-center text-xs text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
+    
+                        <!-- Product Category -->
+                        <p class="text-xs text-gray-600 mt-2">Snacks</p>
+    
+                        <!-- Product Title -->
+                        <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Seeds of Change Organic Quinoa, Brown, & Red Rice</h4>
+    
+                        <!-- Product Review -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center text-xs text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(5)</span>
                         </div>
-                        <span class="text-sm text-gray-500">(5)</span>
-                    </div>
-
-                    <!-- Product Price & Cart -->
-                    <div class="flex justify-between items-center gap-4 mt-4">
-                        <div class="flex md:items-start xl:items-center md:flex-col xl:flex-row gap-1.5">
-                            <span class="text-base text-mainColor font-bold">$52.56</span>
-                            <span class="line-through text-gray-500 text-xs">$55.08</span>
+    
+                        <!-- Product Price & Cart -->
+                        <div class="flex justify-between items-center gap-4 mt-4">
+                            <div class="flex items-start xl:items-center flex-col xl:flex-row gap-1.5">
+                                <span class="text-base text-mainColor font-bold">$52.56</span>
+                                <span class="line-through text-gray-500 text-xs">$55.08</span>
+                            </div>
+                            <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
                         </div>
-                        <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
-                    </div>
-                </a>
-                
-                <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
-                    <div class="relative">
-                        <!-- Product Images -->
-                        <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
-
-                        <!-- Product Action -->
-                        <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                    </a>
+                    
+                    <!-- Single Item -->
+                    <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                        <div class="relative">
+                            <!-- Product Images -->
+                            <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                            <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+    
+                            <!-- Product Action -->
+                            <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Product Category -->
-                    <p class="text-xs text-gray-600 mt-2">Hodo Foods</p>
-
-                    <!-- Product Title -->
-                    <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">All Natural Italian-Style Chicken Meatballs</h4>
-
-                    <!-- Product Review -->
-                    <div class="flex items-center gap-1">
-                        <div class="flex items-center text-xs text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+    
+                        <!-- Product Category -->
+                        <p class="text-xs text-gray-600 mt-2">Hodo Foods</p>
+    
+                        <!-- Product Title -->
+                        <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">All Natural Italian-Style Chicken Meatballs</h4>
+    
+                        <!-- Product Review -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center text-xs text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(8)</span>
                         </div>
-                        <span class="text-sm text-gray-500">(8)</span>
-                    </div>
-
-                    <!-- Product Price & Cart -->
-                    <div class="flex justify-between items-center gap-4 mt-4">
-                        <div class="flex md:items-start xl:items-center md:flex-col xl:flex-row gap-1.5">
-                            <span class="text-base text-mainColor font-bold">$28.85</span>
-                            <span class="line-through text-gray-500 text-xs">$31.50</span>
+    
+                        <!-- Product Price & Cart -->
+                        <div class="flex justify-between items-center gap-4 mt-4">
+                            <div class="flex items-start xl:items-center flex-col xl:flex-row gap-1.5">
+                                <span class="text-base text-mainColor font-bold">$28.85</span>
+                                <span class="line-through text-gray-500 text-xs">$31.50</span>
+                            </div>
+                            <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
                         </div>
-                        <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
-                    </div>
-                </a>
-
-                <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
-                    <div class="relative">
-                        <!-- Product Images -->
-                        <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
-
-                        <!-- Product Action -->
-                        <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                    </a>
+    
+                    <!-- Single Item -->
+                    <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                        <div class="relative">
+                            <!-- Product Images -->
+                            <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                            <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+    
+                            <!-- Product Action -->
+                            <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Product Category -->
-                    <p class="text-xs text-gray-600 mt-2">Snacks</p>
-
-                    <!-- Product Title -->
-                    <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Angie’s Boomchickapop Sweet & Salty Kettle Corn</h4>
-
-                    <!-- Product Review -->
-                    <div class="flex items-center gap-1">
-                        <div class="flex items-center text-xs text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
+    
+                        <!-- Product Category -->
+                        <p class="text-xs text-gray-600 mt-2">Snacks</p>
+    
+                        <!-- Product Title -->
+                        <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Angie’s Boomchickapop Sweet & Salty Kettle Corn</h4>
+    
+                        <!-- Product Review -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center text-xs text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(3)</span>
                         </div>
-                        <span class="text-sm text-gray-500">(3)</span>
-                    </div>
-
-                    <!-- Product Price & Cart -->
-                    <div class="flex justify-between items-center gap-4 mt-4">
-                        <div class="flex md:items-start xl:items-center md:flex-col xl:flex-row gap-1.5">
-                            <span class="text-base text-mainColor font-bold">$48.85</span>
-                            <span class="line-through text-gray-500 text-xs">$51.65</span>
+    
+                        <!-- Product Price & Cart -->
+                        <div class="flex justify-between items-center gap-4 mt-4">
+                            <div class="flex items-start xl:items-center flex-col xl:flex-row gap-1.5">
+                                <span class="text-base text-mainColor font-bold">$48.85</span>
+                                <span class="line-through text-gray-500 text-xs">$51.65</span>
+                            </div>
+                            <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
                         </div>
-                        <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
-                    </div>
-                </a>
-
-                <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
-                    <div class="relative">
-                        <!-- Product Images -->
-                        <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
-
-                        <!-- Product Action -->
-                        <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                    </a>
+    
+                    <!-- Single Item -->
+                    <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                        <div class="relative">
+                            <!-- Product Images -->
+                            <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                            <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+    
+                            <!-- Product Action -->
+                            <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Product Category -->
-                    <p class="text-xs text-gray-600 mt-2">Vegetables</p>
-
-                    <!-- Product Title -->
-                    <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Foster Farms Takeout Crispy Classic Buffalo Wings</h4>
-
-                    <!-- Product Review -->
-                    <div class="flex items-center gap-1">
-                        <div class="flex items-center text-xs text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
+    
+                        <!-- Product Category -->
+                        <p class="text-xs text-gray-600 mt-2">Vegetables</p>
+    
+                        <!-- Product Title -->
+                        <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Foster Farms Takeout Crispy Classic Buffalo Wings</h4>
+    
+                        <!-- Product Review -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center text-xs text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(12)</span>
                         </div>
-                        <span class="text-sm text-gray-500">(12)</span>
-                    </div>
-
-                    <!-- Product Price & Cart -->
-                    <div class="flex justify-between items-center gap-4 mt-4">
-                        <div class="flex md:items-start xl:items-center md:flex-col xl:flex-row gap-1.5">
-                            <span class="text-base text-mainColor font-bold">$17.85</span>
-                            <span class="line-through text-gray-500 text-xs">$19.36</span>
+    
+                        <!-- Product Price & Cart -->
+                        <div class="flex justify-between items-center gap-4 mt-4">
+                            <div class="flex items-start xl:items-center flex-col xl:flex-row gap-1.5">
+                                <span class="text-base text-mainColor font-bold">$17.85</span>
+                                <span class="line-through text-gray-500 text-xs">$19.36</span>
+                            </div>
+                            <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
                         </div>
-                        <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
-                    </div>
-                </a>
-
-                <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
-                    <div class="relative">
-                        <!-- Product Images -->
-                        <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
-
-                        <!-- Product Action -->
-                        <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
-                            <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                    </a>
+    
+                    <!-- Single Item -->
+                    <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                        <div class="relative">
+                            <!-- Product Images -->
+                            <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                            <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+    
+                            <!-- Product Action -->
+                            <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="View"><i class="fa-solid fa-eye"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Compare"><i class="fa-solid fa-shuffle"></i></span>
+                                <span class="w-8 h-8 text-sm rounded-full bg-white text-mainColor flex items-center justify-center transition ease-in duration-300 hover:bg-mainColor hover:text-white" title="Wishlist"><i class="fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Product Category -->
-                    <p class="text-xs text-gray-600 mt-2">Pet Foods</p>
-
-                    <!-- Product Title -->
-                    <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Blue Diamond Almonds Lightly Salted Vegetables</h4>
-
-                    <!-- Product Review -->
-                    <div class="flex items-center gap-1">
-                        <div class="flex items-center text-xs text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+    
+                        <!-- Product Category -->
+                        <p class="text-xs text-gray-600 mt-2">Pet Foods</p>
+    
+                        <!-- Product Title -->
+                        <h4 class="text-sm font-semibold text-gray-700 hover:text-mainColor my-2.5">Blue Diamond Almonds Lightly Salted Vegetables</h4>
+    
+                        <!-- Product Review -->
+                        <div class="flex items-center gap-1">
+                            <div class="flex items-center text-xs text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(2)</span>
                         </div>
-                        <span class="text-sm text-gray-500">(2)</span>
-                    </div>
-
-                    <!-- Product Price & Cart -->
-                    <div class="flex justify-between items-center gap-4 mt-4">
-                        <div class="flex md:items-start xl:items-center md:flex-col xl:flex-row gap-1.5">
-                            <span class="text-base text-mainColor font-bold">$23.85</span>
-                            <span class="line-through text-gray-500 text-xs">$25.08</span>
+    
+                        <!-- Product Price & Cart -->
+                        <div class="flex justify-between items-center gap-4 mt-4">
+                            <div class="flex items-start xl:items-center flex-col xl:flex-row gap-1.5">
+                                <span class="text-base text-mainColor font-bold">$23.85</span>
+                                <span class="line-through text-gray-500 text-xs">$25.08</span>
+                            </div>
+                            <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
                         </div>
-                        <button class="text-sm bg-green-100 text-mainColor py-1.5 px-2.5 cursor-pointer rounded-sm transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Cart</button>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -455,29 +546,29 @@
     <!-- Offer Start -->
     <section class="py-5">
         <div class="container mx-auto px-3">
-            <div class="grid grid-cols-2 justify-between gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 justify-between gap-5">
 
                 <!-- Single Offer -->
                 <div class="flex items-center justify-between gap-5 bg-[#f2ebd9] rounded-xl">
-                    <div class="pl-14">
+                    <div class="max-sm:py-4 pl-8 md:pl-14">
                         <p class="text-sm text-gray-700">Up to 45% OFF</p>
-                        <h4 class="mt-2 mb-4 md:text-2xl xl:text-3xl md:leading-7 leading-9 font-semibold text-gray-700">Fresh vegetable on our product</h4>
+                        <h4 class="mt-2 mb-4 text-xl md:text-2xl xl:text-3xl leading-6 md:leading-7 xl:leading-9 font-semibold text-gray-700">Fresh vegetable on our product</h4>
                         <a href="" class="text-sm font-medium text-mainColor">Buy Now</a>
                     </div>
                     <div class="">
-                        <img src="./assets/img/offer/1.png" alt="" class="max-w-64 object-cover">
+                        <img src="./assets/img/offer/1.png" alt="" class="max-w-40 md:max-w-64 object-cover">
                     </div>
                 </div>
 
                 <!-- Single Offer -->
                 <div class="flex items-center justify-between gap-5 bg-[#d3eff0] rounded-xl">
-                    <div class="pl-14">
+                    <div class="max-sm:py-4 pl-8 md:pl-14">
                         <p class="text-sm text-gray-700">Up to 30% OFF</p>
-                        <h4 class="mt-2 mb-4 md:text-2xl xl:text-3xl md:leading-7 leading-9 font-semibold text-gray-700">Vegetable eggplant 100% fresh food</h4>
+                        <h4 class="mt-2 mb-4 text-xl md:text-2xl xl:text-3xl leading-6 md:leading-7 xl:leading-9 font-semibold text-gray-700">Vegetable eggplant 100% fresh food</h4>
                         <a href="" class="text-sm font-medium text-mainColor">Buy Now</a>
                     </div>
                     <div class="">
-                        <img src="./assets/img/offer/2.png" alt="" class="max-w-64 object-cover">
+                        <img src="./assets/img/offer/2.png" alt="" class="max-w-40 md:max-w-64 object-cover">
                     </div>
                 </div>
             </div>
@@ -486,35 +577,35 @@
     <!-- Offer End -->
 
     <!-- Product Start -->
-    <section class="py-20">
+    <section class="py-14 sm:py-20">
         <div class="container mx-auto px-3">
             <!-- Section Title -->
-            <div class="mb-16 flex lg:items-start xl:items-center justify-between gap-10">
-                <h2 class="text-4xl font-semibold text-gray-800">Our Products</h2>
+            <div class="flex flex-col sm:flex-row lg:items-start xl:items-center justify-between gap-10 mb-10 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800 max-sm:text-center">Our Products</h2>
 
                 <div class="flex-1">
-                    <ul class="flex flex-wrap items-center justify-end gap-2">
-                        <li><a href="" class="block bg-mainColor text-sm text-white shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Bakery</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Vegetables</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Chips</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Snacks</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Beverages</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Milk</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Toasts</a></li>
-                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-bold py-2.5 px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">More...</a></li>
+                    <ul class="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-2">
+                        <li><a href="" class="block bg-mainColor text-sm text-white shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Bakery</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Vegetables</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Chips</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Snacks</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Beverages</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Milk</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">Toasts</a></li>
+                        <li><a href="" class="block bg-gray-100 text-sm text-gray-700 shadow-sm font-semibold sm:font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-full transition ease-in duration-300 hover:text-white hover:bg-mainColor">More...</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Product Items -->
-            <div class="grid grid-cols-5 justify-between gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 justify-between gap-2.5 sm:gap-4">
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">22%</span>
@@ -554,15 +645,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Product Action -->
                         <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
@@ -598,15 +689,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">30%</span>
@@ -646,15 +737,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Product Action -->
                         <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
@@ -690,15 +781,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">25%</span>
@@ -738,15 +829,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/1-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/1-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Product Action -->
                         <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
@@ -782,15 +873,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
                 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/2-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/2-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">30%</span>
@@ -830,15 +921,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/3-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/3-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">25%</span>
@@ -878,15 +969,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/4-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/4-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Product Action -->
                         <div class="absolute top-[50%] right-[50%] translate-x-[50%] -translate-y-[50%] w-full flex items-center justify-center gap-2 origin-right invisible opacity-0 scale-x-0 transition ease-in duration-400 group-hover:visible group-hover:opacity-100 group-hover:scale-x-100">
@@ -922,15 +1013,15 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
 
                 <!-- Single Item -->
-                <a href="single-product.html" class="group bg-white md:p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
+                <a href="single-product.html" class="group bg-white p-4 xl:p-5 border border-gray-100 shadow-xs rounded-xl transition ease-in duration-300 hover:scale-105 hover:border-mainColor">
                     <div class="relative">
                         <!-- Product Images -->
-                        <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
-                        <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover md:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
+                        <img src="./assets/img/product/medium/5-1.jpg" alt="" class="object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:hidden">
+                        <img src="./assets/img/product/medium/5-2.jpg" alt="" class="hidden object-cover max-w-32 sm:max-w-40 xl:max-w-48 mx-auto transition ease-in-out duration-300 group-hover:block">
 
                         <!-- Offer Percentage -->
                         <span class="absolute top-0 left-0 bg-mainColor text-white rounded-sm text-xs font-semibold p-0.5 px-1.5 shadow">22%</span>
@@ -970,7 +1061,7 @@
                     </div>
 
                     <!-- Add to Cart -->
-                    <button class="block w-full mt-2.5 text-sm bg-green-100 text-mainColor py-2 px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="block w-full mt-2.5 text-xs sm:text-sm bg-green-100 text-mainColor py-2 px-4 sm:px-5 cursor-pointer rounded-full transition ease-in duration-300 hover:bg-mainColor hover:text-white"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
                 </a>
             </div>
         </div>
@@ -978,19 +1069,19 @@
     <!-- Product End -->
 
     <!-- Testimonial Start -->
-    <section class="py-20 bg-[#d8f1e5]">
+    <section class="py-14 sm:py-20 bg-[#d8f1e5]">
         <div class="container mx-auto px-3">
             <!-- Section Title -->
-            <div class="mb-16 text-center">
-                <h2 class="text-4xl font-semibold text-gray-800">Testimonials</h2>
-                <p class="text-lg font-medium text-gray-600 mt-2">What Client Says About Us</p>
+            <div class="mb-10 sm:mb-16 text-center">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800">Testimonials</h2>
+                <p class="text-sm sm:text-lg font-medium text-gray-600 mt-2">What Client Says About Us</p>
             </div>
 
             <!-- Testimonials -->
-            <div class="grid grid-cols-3 justify-between gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 justify-between gap-6">
 
                 <!-- Single Testimonial -->
-                <div class="bg-white md:py-7 xl:py-8 md:px-5 xl:px-6 rounded-xl text-center shadow-md group">
+                <div class="bg-white py-8 sm:py-7 xl:py-8 px-6 sm:px-5 xl:px-6 rounded-xl text-center shadow-md group">
                     <!-- Client Image -->
                     <img src="./assets/img/client/1.png" alt="" class="max-w-20 h-20 rounded-full border-2 border-mainColor object-cover mx-auto shadow-md transition ease-out duration-300 group-hover:rotate-y-180">
 
@@ -1007,7 +1098,7 @@
                 </div>
 
                 <!-- Single Testimonial -->
-                <div class="bg-white md:py-7 xl:py-8 md:px-5 xl:px-6 rounded-xl text-center shadow-md group">
+                <div class="bg-white py-8 sm:py-7 xl:py-8 px-6 sm:px-5 xl:px-6 rounded-xl text-center shadow-md group">
                     <!-- Client Image -->
                     <img src="./assets/img/client/2.png" alt="" class="max-w-20 h-20 rounded-full border-2 border-mainColor object-cover mx-auto shadow-md transition ease-out duration-300 group-hover:rotate-y-180">
 
@@ -1024,7 +1115,7 @@
                 </div>
 
                 <!-- Single Testimonial -->
-                <div class="bg-white md:py-7 xl:py-8 md:px-5 xl:px-6 rounded-xl text-center shadow-md group">
+                <div class="bg-white py-8 sm:py-7 xl:py-8 px-6 sm:px-5 xl:px-6 rounded-xl text-center shadow-md group">
                     <!-- Client Image -->
                     <img src="./assets/img/client/3.png" alt="" class="max-w-20 h-20 rounded-full border-2 border-mainColor object-cover mx-auto shadow-md transition ease-out duration-300 group-hover:rotate-y-180">
 
@@ -1045,16 +1136,16 @@
     <!-- Testimonial End -->
 
     <!-- Blog Start -->
-    <section class="py-20">
+    <section class="py-14 sm:py-20">
         <div class="container mx-auto px-3">
             <!-- Section Title -->
-            <div class="mb-16 text-center">
-                <h2 class="text-4xl font-semibold text-gray-800">Latest Blog</h2>
-                <p class="text-lg font-medium text-gray-600 mt-2">Latest news from our feed!</p>
+            <div class="mb-10 sm:mb-16 text-center">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800">Latest Blog</h2>
+                <p class="text-base sm:text-lg font-medium text-gray-600 mt-2">Latest news from our feed!</p>
             </div>
 
             <!-- Blogs -->
-            <div class="grid grid-cols-3 justify-between gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 justify-between gap-6">
 
                 <!-- Single Blog -->
                 <div class="bg-white p-6 rounded-xl shadow-md group">
@@ -1073,7 +1164,7 @@
                     <span class="inline-block text-sm font-semibold bg-mainColor text-white py-1 px-2 rounded-md mt-4 mb-3">Foods</span>
 
                     <!-- Blog Title -->
-                    <h4><a href="" class="text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">Healthy Meal Ideas to Keep You Energized All Day</a></h4>
+                    <h4><a href="" class="text-xl sm:text-lg md:text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">Healthy Meal Ideas to Keep You Energized All Day</a></h4>
                 </div>
 
                 <!-- Single Blog -->
@@ -1093,7 +1184,7 @@
                     <span class="inline-block text-sm font-semibold bg-mainColor text-white py-1 px-2 rounded-md mt-4 mb-3">Snacks</span>
 
                     <!-- Blog Title -->
-                    <h4><a href="" class="text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">The Secret Behind Perfectly Moist Cakes Every Time</a></h4>
+                    <h4><a href="" class="text-xl sm:text-lg md:text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">The Secret Behind Perfectly Moist Cakes Every Time</a></h4>
                 </div>
 
                 <!-- Single Blog -->
@@ -1113,7 +1204,7 @@
                     <span class="inline-block text-sm font-semibold bg-mainColor text-white py-1 px-2 rounded-md mt-4 mb-3">Cook</span>
 
                     <!-- Blog Title -->
-                    <h4><a href="" class="text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">Beginner’s Guide to Cooking Like a Pro at Home</a></h4>
+                    <h4><a href="" class="text-xl sm:text-lg md:text-xl font-medium text-gray-700 transition ease-in duration-300 hover:text-mainColor">Beginner’s Guide to Cooking Like a Pro at Home</a></h4>
                 </div>
             </div>
         </div>
@@ -1123,11 +1214,11 @@
     <!-- Newsletter Start -->
     <section class="py-14 bg-green-50">
         <div class="max-w-3xl mx-auto px-3">
-            <h2 class="text-4xl font-semibold text-gray-700 text-center">Join Our Newsletter</h2>
-            <p class="text-lg font-medium text-gray-700 text-center mt-3 mb-10">Get E-mail updates about our latest shop and special offers.</p>
-            <form action="" class="flex items-center max-w-lg mx-auto">
-                <input type="text" placeholder="Email Address" class="w-3/4 bg-white py-3.5 px-5 rounded-l-full border border-mainColor focus:outline-1 focus:outline-mainColor">
-                <button type="submit" class="w-1/4 bg-mainColor text-white rounded-r-full py-3.5 px-5 font-semibold cursor-pointer border border-mainColor transition ease-in duration-300 hover:bg-green-100 hover:text-mainColor hover:border-green-100">Subscribe</button>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-gray-700 text-center">Join Our Newsletter</h2>
+            <p class="text-base sm:text-lg font-medium text-gray-700 text-center mt-3 mb-10">Get E-mail updates about our latest shop and special offers.</p>
+            <form action="" class="flex items-center max-w-72 sm:max-w-lg mx-auto">
+                <input type="text" placeholder="Email Address" class="w-3/5 sm:w-3/4 bg-white py-3 sm:py-3.5 px-4 sm:px-5 rounded-l-full border border-mainColor focus:outline-1 focus:outline-mainColor">
+                <button type="submit" class="w-2/5 sm:w-1/4 bg-mainColor text-white rounded-r-full py-3 sm:py-3.5 px-4 sm:px-5 font-semibold cursor-pointer border border-mainColor transition ease-in duration-300 hover:bg-green-100 hover:text-mainColor hover:border-green-100">Subscribe</button>
             </form>
         </div>
     </section>
@@ -1136,7 +1227,7 @@
     <!-- Footer Start -->
     <footer class="pt-20 pb-10 bg-gray-800">
         <div class="container mx-auto px-3">
-            <div class="grid grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-10">
                 <!-- Footer About -->
                 <div class="">
                     <a href="block">
@@ -1152,9 +1243,9 @@
 
                 <!-- Quick Links -->
                 <div class="">
-                    <h4 class="text-2xl text-white font-semibold mb-5">Quick Links</h4>
+                    <h4 class="text-xl md:text-2xl text-white font-semibold mb-3 sm:mb-5">Quick Links</h4>
 
-                    <ul class="space-y-2">
+                    <ul class="space-y-0.5 sm:space-y-2">
                         <li><a href="index.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">Home</a></li>
                         <li><a href="about.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">About Us</a></li>
                         <li><a href="blog.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">Blog</a></li>
@@ -1165,9 +1256,9 @@
 
                 <!-- Important Links -->
                 <div class="">
-                    <h4 class="text-2xl text-white font-semibold mb-5">Important Links</h4>
+                    <h4 class="text-xl md:text-2xl text-white font-semibold mb-3 sm:mb-5">Important Links</h4>
 
-                    <ul class="space-y-2">
+                    <ul class="space-y-0.5 sm:space-y-2">
                         <li><a href="shop.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">Our Store</a></li>
                         <li><a href="special.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">Special</a></li>
                         <li><a href="cart.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">Cart</a></li>
@@ -1177,8 +1268,8 @@
                 </div>
 
                 <!-- Account -->
-                <div class="">
-                    <h4 class="text-2xl text-white font-semibold mb-5">Account</h4>
+                <div class="space-y-0.5 sm:space-y-2">
+                    <h4 class="text-xl md:text-2xl text-white font-semibold mb-3 sm:mb-5">Account</h4>
 
                     <ul class="space-y-2">
                         <li><a href="account.html" class="text-gray-50 font-medium transition ease-in duration-300 hover:text-mainColor">My Account</a></li>
@@ -1200,7 +1291,7 @@
     <!-- Cart Start -->
     <section class="min-h-screen h-full fixed top-0 right-0 left-0 z-20 origin-right invisible opacity-0 transition ease-in-out duration-300" id="cart-item">
         <div class="absolute top-0 right-0 left-0 w-full h-full bg-black opacity-60 close-cart"></div>
-        <div class="absolute top-0 right-0 bg-white w-sm h-full botder-l border-gray-300 shadow z-30 origin-right scale-x-0 transition ease-out duration-300 delay-100" id="cart-box">
+        <div class="absolute top-0 right-0 bg-white w-80 sm:w-sm h-full botder-l border-gray-300 shadow z-30 origin-right scale-x-0 transition ease-out duration-300 delay-100" id="cart-box">
             <div class="flex flex-col justify-between gap-10 h-full">
                 <div class="h-4/5">
                     <!-- Cart Head -->
@@ -1217,16 +1308,16 @@
                     </div>
 
                     <!-- Cart Items -->
-                    <div class="pt-6 h-full overflow overflow-y-auto">
+                    <div class="pt-6 h-full overflow overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                         <div class="divide-y divide-gray-200 space-y-6">
                             <div class="flex gap-4 px-4 pb-6">
-                                <div class="w-20 h-20 border border-gray-200 rounded-sm">
-                                    <img src="./assets/img/product/sm/1.webp" alt="">
+                                <div class="w-16 sm:w-20 h-14 sm:h-20 border border-gray-200 rounded-sm flex items-center justify-center">
+                                    <img src="./assets/img/product/sm/1.webp" alt="" class="w-16 h-12 sm:h-16">
                                 </div>
             
                                 <div class="flex items-start gap-5">
                                     <div class="space-y-2.5">
-                                        <a href="single-product.html" class="block text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
+                                        <a href="single-product.html" class="block text-xs sm:text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
                                         <span class="block text-gray-600 text-xs">3 X $20.00</span>
                                     </div>
                                     <button class="border-0 cursor-pointer"><i class="fa-solid fa-trash-can text-rose-500"></i></button>
@@ -1234,13 +1325,13 @@
                             </div>
 
                             <div class="flex gap-4 px-4 pb-6">
-                                <div class="w-20 h-20 border border-gray-200 rounded-sm">
-                                    <img src="./assets/img/product/sm/1.webp" alt="">
+                                <div class="w-16 sm:w-20 h-14 sm:h-20 border border-gray-200 rounded-sm flex items-center justify-center">
+                                    <img src="./assets/img/product/medium/1-1.jpg" alt="" class="w-16 h-12 sm:h-16">
                                 </div>
             
                                 <div class="flex items-start gap-5">
                                     <div class="space-y-2.5">
-                                        <a href="single-product.html" class="block text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
+                                        <a href="single-product.html" class="block text-xs sm:text-sm font-bold font-outfit text-gray-700 transition ease-in duration-300 hover:text-mainColor">Potato per kg (Approx. 950 g - 1000 g)</a>
                                         <span class="block text-gray-600 text-xs">3 X $20.00</span>
                                     </div>
                                     <button class="border-0 cursor-pointer"><i class="fa-solid fa-trash-can text-rose-500"></i></button>
@@ -1274,30 +1365,54 @@
     <!-- Cart End -->
 
     <script>
+        // Cart
         const cart = document.getElementById('cart');
         const cartItem = document.getElementById('cart-item');
         let closeCart = document.getElementsByClassName('close-cart');
+
+        // Category
         const hasChild = document.querySelectorAll(".has-child");
 
-       document.getElementById('my-account').addEventListener('click', () => {
+        // Mobile Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBox = document.getElementById('menu-box');
+        let closeMenu = document.getElementsByClassName('close-menu');
+
+        // My Account
+        document.getElementById('my-account').addEventListener('click', () => {
             const showAccount = document.getElementById('show-account');
             showAccount.classList.toggle('scale-y-0');
             showAccount.classList.toggle('invisible');
             showAccount.classList.toggle('opacity-0');
         });
 
-
+        // Cart
         cart.addEventListener('click', () => {
             cartItem.classList.remove('invisible', 'opacity-0');
             document.getElementById('cart-box').classList.remove('scale-x-0');
         });
 
+        // Mobile Menu
+        mobileMenu.addEventListener('click', () => {
+            menuBox.classList.remove('invisible', 'opacity-0');
+            document.getElementById('menu-item').classList.remove('scale-x-0');
+        });
+
+        // Close Cart
         for (let i = 0; i < closeCart.length; i++) {
             closeCart[i].addEventListener('click', () => {
                 cartItem.classList.add('invisible', 'opacity-0');
             });
         }
 
+        // Close Menu
+        for (let i = 0; i < closeMenu.length; i++) {
+            closeMenu[i].addEventListener('click', () => {
+                menuBox.classList.add('invisible', 'opacity-0');
+            });
+        }
+
+        // Category
         hasChild.forEach((item) => {
             const link = item.querySelector("a");
             const submenu = item.querySelector("ul");
